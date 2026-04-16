@@ -56,7 +56,7 @@ nexttile(9);
 imshow(out_2m - z, [-0.5 0.5]);
 nexttile(10);
 imshow(out_3a - z, [-0.5 0.5]);
-exportgraphics(fig, 'fig_1.png');
+exportgraphics(fig, 'fig_1.png', 'Resolution', 600);
 
 fig = figure;
 plot(1:opts.max_itr, history_1f, '-o'); hold on;
@@ -66,4 +66,4 @@ legend('Fixed \rho schedule', 'Monotone \rho schedule', 'Proposed \alpha schedul
 xlabel('Iteration number, k');
 ylabel('PSNR (dB)');
 grid on;
-exportgraphics(fig, 'fig_2.png');
+exportgraphics(fig, 'fig_2.png', 'Resolution', 600);

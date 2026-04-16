@@ -62,4 +62,4 @@ legend('Fixed \rho schedule', 'Monotone \rho schedule', 'Proposed \alpha schedul
 xlabel('\rho_0');
 ylabel('PSNR (dB)');
 grid on;
-exportgraphics(fig, 'fig_3.png');
+exportgraphics(fig, 'fig_3.png', 'Resolution', 600);

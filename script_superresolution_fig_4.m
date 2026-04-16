@@ -47,11 +47,11 @@ end
 save('fig4_results.mat', 'history_M', 'history_A', 'rhos', 'M_gammas', 'A_gammas');
 
 % Visualization options
-xtick_font_size = 10;
-ytick_font_size = 10;
-label_font_size = 10;
-annotation_font_size = 10;
-colorbar_tick_font_size = 10;
+xtick_font_size = 6;
+ytick_font_size = 6;
+label_font_size = 6;
+annotation_font_size = 6;
+colorbar_tick_font_size = 6;
 
 history_A = reshape(history_A, 50, 11, 11);
 X_A = squeeze(history_A(end,:,:));
@@ -123,5 +123,5 @@ for i = 1:size(X_M_plot, 1)
     end
 end
 
-exportgraphics(figA, 'fig_4_a.png');
-exportgraphics(figM, 'fig_4_b.png');
+exportgraphics(figA, 'fig_4_a.png', 'Resolution', 600);
+exportgraphics(figM, 'fig_4_b.png', 'Resolution', 600);
