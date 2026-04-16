@@ -22,7 +22,7 @@ pnp-admm-alpha/
 └── script_superresolution_tab_*.m
 ```
 
-The functions `PlugPlayADMM_super_alpha_log_output.m` and `PlugPlayADMM_super_log_output.m` are the main customized functions for running PnP-ADMM with the proposed alpha schedule and the original fixed rho schedule, respectively. Run the scripts `script_superresolution_*.m` to reproduce the results presented in the technical report. The results will be saved in the `results/` folder. Note that the scripts will automatically create the `results/` folder if it does not exist. The results include the reconstructed images, PSNR values, and log files containing the convergence information.
+The functions `PlugPlayADMM_super_alpha_log_output.m` and `PlugPlayADMM_super_log_output.m` are the main customized functions for running PnP-ADMM with the proposed alpha schedule and the original fixed rho schedule, respectively. Run the scripts `script_superresolution_*.m` to reproduce the results presented in the technical report. 
 
 Figure 1.
 
