@@ -52,8 +52,6 @@ parfor i = 1:length(rhos)
         z);
 end
 
-save('fig3_results.mat', 'history_1f', 'history_2m', 'history_3a', 'rhos');
-
 fig = figure;
 semilogx(rhos, history_1f(end,:), '-o'); hold on;
 semilogx(rhos, history_2m(end,:), '-s'); hold on;
