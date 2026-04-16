@@ -36,16 +36,6 @@ opts.gamma   = 1.005;
 [out_3a, history_3a] = PlugPlayADMM_super_alpha_log_output(y,h,K,lambda,method,opts,z);
 
 %display
-fig = figure;
-plot(1:opts.max_itr, history_1f, '-o'); hold on;
-plot(1:opts.max_itr, history_2m, '-s'); hold on;
-plot(1:opts.max_itr, history_3a, '-d'); hold on;
-legend('Fixed \rho schedule', 'Monotone \rho schedule', 'Proposed \alpha schedule', 'Location', 'southeast');
-xlabel('Iteration number, k');
-ylabel('PSNR (dB)');
-grid on;
-exportgraphics(fig, 'fig_1.pdf');
-
 fig = figure('Position', [0, 0, 4000, 1600]);
 t = tiledlayout(2, 5, 'TileSpacing','tight');
 nexttile(1);
@@ -66,4 +56,14 @@ nexttile(9);
 imshow(out_2m - z, [-0.5 0.5]);
 nexttile(10);
 imshow(out_3a - z, [-0.5 0.5]);
+exportgraphics(fig, 'fig_1.pdf');
+
+fig = figure;
+plot(1:opts.max_itr, history_1f, '-o'); hold on;
+plot(1:opts.max_itr, history_2m, '-s'); hold on;
+plot(1:opts.max_itr, history_3a, '-d'); hold on;
+legend('Fixed \rho schedule', 'Monotone \rho schedule', 'Proposed \alpha schedule', 'Location', 'southeast');
+xlabel('Iteration number, k');
+ylabel('PSNR (dB)');
+grid on;
 exportgraphics(fig, 'fig_2.pdf');

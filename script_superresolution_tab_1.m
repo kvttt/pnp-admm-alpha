@@ -49,3 +49,14 @@ end
 
 save('fig4_results.mat', 'history_1f', 'history_2m', 'history_3a');
 
+X = zeros(3, 14);
+X(1,1:end-1) = history_1f(end,:);
+X(2,1:end-1) = history_2m(end,:);
+X(3,1:end-1) = history_3a(end,:);
+X(1,end) = mean(history_1f(end,:));
+X(2,end) = mean(history_2m(end,:));
+X(3,end) = mean(history_3a(end,:));
+
+T = array2table(X', 'VariableNames', {'Fixed_rho_schedule', 'Monotone_rho_schedule', 'Proposed_alpha_schedule'});
+disp(T);
+writetable(T, 'tab1.txt');
