@@ -44,8 +44,7 @@ parfor k = 1:(M*N)
         z);
 end
 
-save('fig5_results.mat', 'history_M', 'history_A', 'rhos', 'M_gammas', 'A_gammas');
-
+save('fig4_results.mat', 'history_M', 'history_A', 'rhos', 'M_gammas', 'A_gammas');
 
 % Visualization options
 xtick_font_size = 10;
@@ -124,5 +123,5 @@ for i = 1:size(X_M_plot, 1)
     end
 end
 
-exportgraphics(figA, 'fig_4_a.pdf');
-exportgraphics(figM, 'fig_4_b.pdf');
+exportgraphics(figA, 'fig_4_a.png');
+exportgraphics(figM, 'fig_4_b.png');
